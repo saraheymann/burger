@@ -1,8 +1,22 @@
-body {
-  background-color: #f4c242;
+.body{
+  background-color: yellow;
 }
 
-img {
+img{
   width: 15%;
+}
+
+.mainTitle{
+  font-family: 'Rubik', sans-serif;
+  font-size: 65px;
+}
+
+.title{
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  color: brown;
+}
+.orders{
+  margin-left: 20px;
 }
 
