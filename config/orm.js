@@ -19,21 +19,17 @@ var orm = {
     });
   },
 // insert
-  insertOne: function(burger_name, cb) {
+  insertOne: function(burger_name) {
     connection.query('INSERT INTO burgers SET ?', {
       burger_name: burger_name,
-      devoured: false,
-      date: timestamp
-    }, function (err, result) {
-      if (err) throw err;
-      cb(result);
+      devoured: false
     });
   },
 // update
-   updateOne: function(burgerID, cb){
-    connection.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {id: burgerID}], function (err, result) {
+   updateOne: function(burgerID){
+    connection.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {item_id: burgerID}], function (err, result) {
         if (err) throw err;
-        cb(result);
+        // cb(result);
       });
 
   }
